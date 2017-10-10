@@ -2,7 +2,7 @@
 import { Tinytest } from "meteor/tinytest";
 
 // Import and rename a variable exported by abc-set-connection-options.js.
-import { name as packageName } from "meteor/abc-set-connection-options";
+import { name as packageName } from "meteor/danwild:abc-set-connection-options";
 
 // Write your tests here!
 // Here is an example.
