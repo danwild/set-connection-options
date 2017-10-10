@@ -1,4 +1,4 @@
-# abc-set-connection-options
+# abcdanwild:set-connection-options
 
 Simple Meteor Atmosphere Package to allow you to pass in additional 
 [connection settings](http://mongodb.github.io/node-mongodb-native/2.1/reference/connecting/connection-settings/)
@@ -11,8 +11,8 @@ i.e. You can set useful things like `ssl`, `sslCA`, `sslCert`, `connectTimeoutMS
 
 * Requires Meteor v1.4+, it uses the 
 [Mongo.setConnectionOptions](https://github.com/meteor/meteor/pull/7277) method (thanks [@dburles](https://github.com/dburles))
-* Yes, the package is prefixed with `abc` so that connection options are established prior to other packages that may
-be using Mongo collections, e.g. `accounts-base`. Unfortunate but necessary.
+* Yes, my username for this package is prefixed with `abc` so that connection options are established prior to other packages that may
+be using Mongo collections, e.g. `accounts-base`. Unfortunate but necessary (alternative is to use local packages).
 
 ## Use
 
