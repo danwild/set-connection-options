@@ -12,7 +12,7 @@ i.e. You can set useful things like `ssl`, `sslCA`, `sslCert`, `connectTimeoutMS
 * Requires Meteor v1.4+, it uses the 
 [Mongo.setConnectionOptions](https://github.com/meteor/meteor/pull/7277) method (thanks [@dburles](https://github.com/dburles))
 * Yes, the package is prefixed with `abc` so that connection options are established prior to other packages that may
-be using Mongo collections, e.g. `accounts-base`
+be using Mongo collections, e.g. `accounts-base`. Unfortunate but necessary.
 
 ## Use
 
