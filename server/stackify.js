@@ -1,0 +1,2 @@
+require('stackify-node-apm');
+

@@ -1,6 +1,9 @@
+const METEOR_VERSION = '2.2.1';
+
+
 Package.describe({
 	name: 'riffyn:set-connection-options',
-	version: '0.0.3',
+	version: '0.0.4',
 	// Brief, one-line summary of the package.
 	summary: 'Set mongo connection setting ignoreUndefined to false',
 	// URL to the Git repository containing the source code for this package.
@@ -10,19 +13,30 @@ Package.describe({
 	documentation: 'README.md'
 });
 
-Package.onUse(function (api) {
-	api.versionsFrom('1.8.0.2');
+
+const npms = {
+	"stackify-node-apm": "1.15.2",
+}
+
+Npm.depends(npms);
+
+
+Package.onUse(api => {
+	api.versionsFrom(METEOR_VERSION);
+
 	api.use('ecmascript');
 	api.use('meteor');
 	api.use('mongo');
 	api.use('npm-mongo');
-	api.mainModule('server.js', 'server');
-	api.mainModule('client.js', 'client');
+	
+	api.mainModule('server/index.js', 'server');
 });
 
-Package.onTest(function (api) {
+
+Package.onTest(api => {
 	api.use('ecmascript');
 	api.use('tinytest');
 	api.use('riffyn:set-connection-options');
+
 	api.mainModule('set-connection-options-tests.js');
 });
