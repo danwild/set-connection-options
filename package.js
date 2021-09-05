@@ -14,11 +14,6 @@ Package.describe({
 });
 
 
-const npms = {
-	"stackify-node-apm": "1.15.2",
-}
-
-Npm.depends(npms);
 
 
 Package.onUse(api => {
